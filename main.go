@@ -23,6 +23,6 @@ func main() {
 	var ips = ipAddrs
 	for _, ip := range ips {
 		IP := net.ParseIP(ip)
-		fmt.Println(IP, ":", cmd.IsPublicIP(IP))
+		cmd.ShowPublicIP(cmd.IsPublicIP(IP), IP)
 	}
 }
