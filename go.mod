@@ -1,3 +1,3 @@
-module github.com/jonathanruiz/simple-go-service
+module github.com/jonathanruiz/iptracker-app
 
 go 1.19
