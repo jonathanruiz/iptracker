@@ -6,7 +6,7 @@ import (
 )
 
 // getAllPrivateIP returns all of the IP addresses of the machine.
-func getAllPrivateIP() []net.Addr {
+func GetAllPrivateIP() []net.Addr {
 	// Get all of the IP addresses associated with the machine.
 	addrs, err := net.InterfaceAddrs()
 
@@ -21,7 +21,7 @@ func getAllPrivateIP() []net.Addr {
 }
 
 // Get single Private IP address of the machine.
-func getPrivateIP(ips []net.Addr) []string {
+func GetPrivateIP(ips []net.Addr) []string {
 	// Create an array to hold the IP addresses.
 	var ipAddrs []string
 
