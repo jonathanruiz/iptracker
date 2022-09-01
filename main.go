@@ -17,7 +17,10 @@ func indexHandler(c *fiber.Ctx, db *sql.DB) error {
 	var res string
 	var ips []string
 	rows, err := db.Query("SELECT * FROM ip")
-	fmt.Println("rows: ", rows)
+
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	defer rows.Close()
 
@@ -25,6 +28,7 @@ func indexHandler(c *fiber.Ctx, db *sql.DB) error {
 		log.Fatalln(err)
 		c.JSON("An error occured")
 	}
+
 	for rows.Next() {
 		rows.Scan(&res)
 		ips = append(ips, res)
@@ -70,11 +74,11 @@ func main() {
 	})
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		println("Is this working?")
 		return indexHandler(c, db)
 	})
 
 	app.Post("/", func(c *fiber.Ctx) error {
+
 		return postHandler(c, db)
 	})
 
