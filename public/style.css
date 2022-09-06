@@ -3,13 +3,13 @@ body {
   line-height: 1.6;
 }
 
-.add-todo-input,
-.edit-todo-input {
+.add-ip-input,
+.edit-ip-input {
   outline: none;
 }
 
-.add-todo-input:focus,
-.edit-todo-input:focus {
+.add-ip-input:focus,
+.edit-ip-input:focus {
   border: none !important;
   box-shadow: none !important;
 }
@@ -19,18 +19,18 @@ body {
   font-size: 0.8rem;
 }
 
-.edit-todo-input {
+.edit-ip-input {
   font-size: 1.7rem !important;
 }
 
-.todo-actions {
+.ip-actions {
   visibility: hidden !important;
 }
 
-.todo-item:hover .todo-actions {
+.ip-item:hover .ip-actions {
   visibility: visible !important;
 }
 
-.todo-item.editing .todo-actions .edit-icon {
+.ip-item.editing .ip-actions .edit-icon {
   display: none !important;
 }
